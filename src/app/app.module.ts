@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TaskInputComponent } from './components/task-input.component';
+import { TaskFormComponent } from './components/task-form.component';
 
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './components/task-list.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, TaskInputComponent, TaskListComponent],
+  imports: [BrowserModule, TaskFormComponent, TaskListComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
