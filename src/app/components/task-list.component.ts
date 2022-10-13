@@ -1,15 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { TaskCardComponent } from './task-card.component';
 
 @Component({
-  imports: [CommonModule],
+  imports: [CommonModule, TaskCardComponent],
   standalone: true,
   selector: 'app-task-list',
-  template: `<div>
-    <ul>
-      <li *ngFor="let task of tasks">{{ task }}</li>
+  template: `
+    <ul class="mt-8 overflow-auto h-96 p-4">
+      <li class="my-2" *ngFor="let task of tasks">
+        <app-task-card [task]="task"></app-task-card>
+      </li>
     </ul>
-  </div>`,
+  `,
 })
 export class TaskListComponent implements OnInit {
   @Input() tasks: string[] = [];
